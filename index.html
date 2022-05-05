@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Digital Confession</h1>
+    <div id="choose">
+      <input class="button" type="button" value="Confess" onclick="toConfess()">
+      <input class="button" type="button" value="Search" onclick="toSearch()">
+    </div>
+
+    <div id="boxes">
+      <div id="leftbox">
+        <h2 style="text-align: center">Your Confessions:</h2>
+        <span id="yours"></span>
+      </div>
+
+      <div id="middlebox">
+        <span id="main" style="font-weight:bold">Please Confess</span>
+      </div>
+
+      <div id="rightbox">
+        <h2 style="text-align: center">Lastest Confessions:</h2>
+        <span id="latest"></span>
+      </div>
+    </div>
+
+    <div id="confesses">
+      <label for="name">Name (Optional):</label><br><br>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="input">Your Confession:</label><br><br>
+      <textarea id="input" name="input" rows="4" cols="51"></textarea><br><br>
+      <input type="button" value="Submit" onclick="confess()"><br><br>
+    </div>
+
+    <div id="searches">
+      <label for="search">Search Here</label><br><br>
+      <label for="name">Using Name:</label><br>
+      <input type="text" id="sname" name="sname"><br><br>
+      <label for="name">Using Code:</label><br>
+      <input type="text" id="scode" name="scode"><br><br>
+      <input type="button" value="Search" onclick="search()"><br><br>
+    </div>
+
+    <main></main>
+  
+
+</body></html>
