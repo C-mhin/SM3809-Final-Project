@@ -104,29 +104,23 @@ function draw() {
     }
   }
 
-  if (currentTime - lastLUpdate >= 5000) {
-    // update local list for every 5s if there are changes
-    if (localCfs.length > noOfLocal) {
-      displayYours(); // display local list on the rightbox
-      noOfLocal = localCfs.length;
-    }
-    lastLUpdate = currentTime;
+  // update local list if there are changes
+  if (localCfs.length > noOfLocal) {
+    displayYours(); // display local list on the rightbox
+    noOfLocal = localCfs.length;
   }
 
-  if (currentTime - lastGUpdate >= 2000) {
-    // update global list for every 2s if there are changes
-    if (records.data.length >= 7) {
-      if (records.data.length > noOfRecords) {
-        displayLatest();
-        noOfRecords = records.data.length;
-      }
+  // update global list if there are changes
+  if (records.data.length >= 7) {
+    if (records.data.length > noOfRecords) {
+      displayLatest();
+      noOfRecords = records.data.length;
     }
-    lastGUpdate = currentTime;
   }
-
   // for demo only
   testLastest();
   // end of for demo only
+
 }
 
 function confess() {
